@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google Login-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GoogleLogin" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="nBo-4N-eDI" customClass="GIDSignInButton">
+                                <rect key="frame" x="24" y="626" width="367" height="196"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97B-hW-J2g">
+                                <rect key="frame" x="10" y="419" width="381" height="74"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bloggings">
+                                        <attributes>
+                                            <color key="NSColor" red="0.086475037038326263" green="0.21403017640113831" blue="0.40176823735237122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="64" name="TimesNewRomanPSMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="4" height="3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gh-Kq-bIL">
+                                <rect key="frame" x="10" y="533" width="384" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="KTM-Am-RgF" kind="presentation" modalPresentationStyle="fullScreen" id="HrI-8i-dE7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="97B-hW-J2g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="375" id="20e-ZT-xGT"/>
+                            <constraint firstItem="0Gh-Kq-bIL" firstAttribute="top" secondItem="97B-hW-J2g" secondAttribute="bottom" constant="40" id="2Cl-3Y-2ge"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="97B-hW-J2g" secondAttribute="trailing" constant="23" id="N7k-lf-6c3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nBo-4N-eDI" secondAttribute="bottom" constant="40" id="Xs0-CQ-zoz"/>
+                            <constraint firstItem="nBo-4N-eDI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="582" id="dod-T7-G8o"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nBo-4N-eDI" secondAttribute="trailing" constant="23" id="fyr-n2-oYe"/>
+                            <constraint firstItem="97B-hW-J2g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="gSN-ZN-jGv"/>
+                            <constraint firstItem="nBo-4N-eDI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="k3O-Ek-Kma"/>
+                            <constraint firstItem="0Gh-Kq-bIL" firstAttribute="width" secondItem="97B-hW-J2g" secondAttribute="height" multiplier="192:37" id="uVs-dX-zt4"/>
+                            <constraint firstItem="0Gh-Kq-bIL" firstAttribute="leading" secondItem="97B-hW-J2g" secondAttribute="leading" id="zFY-HM-vzN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="nBo-4N-eDI" id="gpx-Lm-D3Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="89.732142857142847"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="biJ-Pz-7LW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="KTM-Am-RgF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qq1-SE-F64"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEF-Nw-T9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="-63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
